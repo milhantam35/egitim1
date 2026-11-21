@@ -6,10 +6,13 @@ Claude Code eğitim çalışma klasörü: komut notları ve projeye özel skill'
 
 - `claude-code-komutlari.pdf` — Claude Code komutları üzerine eğitim dokümanı.
 - `.claude/skills/cmw104-new-session/SKILL.md` — oturum kapatma skill'i.
-- `cv-site/index.html` — kişisel CV sitesi (tek dosya, statik HTML/CSS/JS). TR/EN dil ve açık/koyu tema geçişi; varsayılan dil TR. Kaynak: LinkedIn "Save to PDF" çıktısı.
+- `cv-site/index.html` — kişisel tanıtım sitesi (tek dosya, statik HTML/CSS/JS, kütüphane yok). Bina otomasyonu odaklı, koyu tema, akan animasyonlar (pencere ışık dalgası, BMS veri akışı, canlı enerji grafiği, scroll reveal). TR/EN geçişi; varsayılan TR. Kaynak: LinkedIn "Save to PDF" çıktısı.
 
-## CV Sitesi Kararları
+## Site Kararları
 
+- CV formatından tanıtım sitesine çevrildi; bina otomasyonu ön planda.
+- Enerji/sıcaklık değerleri JS simülasyonu; sayfada "Görsel simülasyondur" notu kalmalı.
+- `prefers-reduced-motion` açıkken yalnızca büyük hareketler (drift, float, marquee, kayarak gelme) kapanır; ışık, veri akışı ve canlı değerler bilinçli olarak çalışmaya devam eder (kullanıcının Windows'unda animasyon efektleri kapalı).
 - Deneyimde yalnızca Siemens (SI B PSE, Nisan 2024 – Günümüz) gösterilir; önceki işler bilinçli olarak çıkarıldı.
 - Eğitim: İYTE Yüksek Lisans + Beykent Lisans; lise yok.
 - Telefon numarası gizlilik için sitede yok; e-posta ve LinkedIn var.
@@ -42,4 +45,5 @@ Claude Code eğitim çalışma klasörü: komut notları ve projeye özel skill'
 - Klasör git reposu yapıldı, `.gitignore` eklendi, ilk commit atıldı.
 - Remote önce yer tutucu adresle eklenmişti (400 hatası); `milhantam35/egitim1` olarak düzeltildi ve push edildi.
 - LinkedIn profilinden (PDF) `cv-site/index.html` CV sitesi oluşturuldu; deneyimde yalnızca Siemens var.
+- Site, bina otomasyonu odaklı animasyonlu tanıtım sitesine dönüştürüldü.
 - Yapılacak: GitHub'da Settings → Pages'ten `master` / root seçilerek yayın açılmalı (repo gizliyse önce public yapılmalı).
