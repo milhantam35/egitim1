@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="tr" data-lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murat İlhan — CV</title>
+<meta name="description" content="Murat İlhan — Siemens, Bina Yönetim Sistemleri. Enerji yönetimi, otomasyon ve teknik satış desteği.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f7f6;
+    --surface: #ffffff;
+    --ink: #13201d;
+    --muted: #5b6b67;
+    --line: #dfe6e3;
+    --accent: #0f8a73;
+    --accent-soft: #e2f3ef;
+    --side: #12302b;
+    --side-ink: #e8f1ee;
+    --side-muted: #9fb8b1;
+    --shadow: 0 1px 2px rgba(16,40,35,.06), 0 8px 24px rgba(16,40,35,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1513; --surface: #141f1c; --ink: #e6eeeb; --muted: #93a6a0;
+      --line: #22322e; --accent: #3cc7a8; --accent-soft: #163a32;
+      --side: #0a1916; --side-ink: #e6eeeb; --side-muted: #8aa59d;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1513; --surface: #141f1c; --ink: #e6eeeb; --muted: #93a6a0;
+    --line: #22322e; --accent: #3cc7a8; --accent-soft: #163a32;
+    --side: #0a1916; --side-ink: #e6eeeb; --side-muted: #8aa59d;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6;
+  }
+  a { color: inherit; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, Consolas, monospace; }
+
+  html[data-lang="tr"] [lang="en"], html[data-lang="en"] [lang="tr"] { display: none !important; }
+
+  .toolbar {
+    position: fixed; top: 16px; right: 16px; z-index: 10;
+    display: flex; gap: 6px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 4px; box-shadow: var(--shadow);
+  }
+  .toolbar button {
+    border: 0; background: transparent; color: var(--muted); cursor: pointer;
+    font: 600 13px/1 "Manrope", sans-serif; padding: 8px 12px; border-radius: 999px;
+  }
+  .toolbar button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+  .toolbar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .layout {
+    max-width: 1120px; margin: 0 auto; padding: 72px 16px 48px;
+    display: grid; grid-template-columns: 320px 1fr; gap: 28px; align-items: start;
+  }
+
+  /* Sidebar */
+  aside {
+    background: var(--side); color: var(--side-ink); border-radius: 20px;
+    padding: 32px 26px; position: sticky; top: 24px;
+  }
+  .avatar {
+    width: 84px; height: 84px; border-radius: 22px; display: grid; place-items: center;
+    background: linear-gradient(135deg, #1fb393, #0f6f5d); color: #fff;
+    font-weight: 800; font-size: 30px; letter-spacing: .5px; margin-bottom: 20px;
+  }
+  aside h1 { font-size: 28px; line-height: 1.15; margin: 0 0 8px; font-weight: 800; letter-spacing: -.5px; }
+  .role { color: var(--side-ink); opacity: .92; font-weight: 600; margin: 0 0 4px; }
+  .loc { color: var(--side-muted); font-size: 14px; margin: 0; display: flex; align-items: center; gap: 6px; }
+  aside h3 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1.6px; color: var(--side-muted);
+    margin: 28px 0 12px; font-weight: 700;
+  }
+  .contact { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .contact a {
+    display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 14px;
+    color: var(--side-ink); word-break: break-word;
+  }
+  .contact a:hover { color: #6fe0c6; }
+  .contact svg { flex: none; width: 18px; height: 18px; opacity: .8; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 13px; font-weight: 600; padding: 6px 11px; border-radius: 999px;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+  }
+  .lang-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; }
+  .lang-row span:last-child { color: var(--side-muted); }
+  .bar { height: 6px; border-radius: 6px; background: rgba(255,255,255,.1); margin-bottom: 14px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: #3cc7a8; border-radius: 6px; }
+
+  /* Main */
+  main { display: grid; gap: 28px; min-width: 0; }
+  section.card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    padding: 30px 32px; box-shadow: var(--shadow);
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700;
+    letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  .eyebrow::before { content: ""; width: 18px; height: 2px; background: var(--accent); border-radius: 2px; }
+  .hero h2 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.2; margin: 0 0 16px; letter-spacing: -.6px; font-weight: 800; }
+  .hero h2 em { font-style: normal; color: var(--accent); }
+  .hero p { color: var(--muted); margin: 0 0 12px; max-width: 68ch; }
+
+  .focus { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+  .focus div {
+    border: 1px solid var(--line); border-radius: 14px; padding: 16px; background: var(--bg);
+  }
+  .focus b { display: block; font-size: 15px; margin-bottom: 4px; }
+  .focus span { font-size: 13.5px; color: var(--muted); line-height: 1.5; display: block; }
+  .focus svg { width: 22px; height: 22px; color: var(--accent); margin-bottom: 10px; }
+
+  h2.sec { font-size: 22px; margin: 0 0 20px; letter-spacing: -.3px; font-weight: 800; }
+
+  .job { display: grid; grid-template-columns: 56px 1fr; gap: 18px; }
+  .logo {
+    width: 56px; height: 56px; border-radius: 14px; background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center; font-weight: 800; font-size: 20px;
+  }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; }
+  .job h3 { margin: 0; font-size: 18px; font-weight: 700; }
+  .job .co { color: var(--muted); font-weight: 600; margin: 2px 0 0; }
+  .date { font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .now {
+    display: inline-block; margin-left: 8px; font-size: 11px; font-weight: 700; letter-spacing: .6px;
+    padding: 3px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+    vertical-align: middle; text-transform: uppercase;
+  }
+  .job ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); }
+  .job li { margin-bottom: 6px; }
+
+  .edu { display: grid; gap: 4px; }
+  .edu-item { display: grid; grid-template-columns: 14px 1fr; gap: 16px; padding-bottom: 20px; position: relative; }
+  .edu-item:last-child { padding-bottom: 0; }
+  .edu-item::before {
+    content: ""; width: 12px; height: 12px; border-radius: 50%; border: 3px solid var(--accent);
+    background: var(--surface); margin-top: 6px; position: relative; z-index: 1;
+  }
+  .edu-item:not(:last-child)::after {
+    content: ""; position: absolute; left: 5px; top: 22px; bottom: -2px; width: 2px; background: var(--line);
+  }
+  .edu-item h3 { margin: 0; font-size: 17px; font-weight: 700; }
+  .edu-item p { margin: 2px 0 0; color: var(--muted); font-size: 15px; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px;
+    background: var(--accent-soft); color: var(--accent); margin-top: 6px;
+  }
+
+  .cta {
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+    background: var(--accent-soft); border-color: transparent;
+  }
+  .cta h2 { margin: 0; font-size: 20px; }
+  .cta p { margin: 4px 0 0; color: var(--muted); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700;
+    background: var(--accent); color: #fff; padding: 12px 18px; border-radius: 12px; font-size: 15px;
+  }
+  :root[data-theme="dark"] .btn { color: #06201a; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn { color: #06201a; } }
+  .btn:hover { filter: brightness(1.08); }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 8px 16px 40px; }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; padding-top: 72px; }
+    aside { position: static; }
+    .focus { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    section.card { padding: 24px 20px; }
+    .job { grid-template-columns: 1fr; }
+    .logo { width: 48px; height: 48px; }
+  }
+  @media print {
+    .toolbar, .cta { display: none; }
+    body { background: #fff; }
+    .layout { padding: 0; grid-template-columns: 260px 1fr; }
+    aside { position: static; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.card { box-shadow: none; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar" role="group" aria-label="Dil / Language">
+  <button type="button" data-set-lang="tr" aria-pressed="true">TR</button>
+  <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  <button type="button" id="theme" aria-label="Tema / Theme" title="Tema">◐</button>
+</div>
+
+<div class="layout">
+  <aside>
+    <div class="avatar" aria-hidden="true">Mİ</div>
+    <h1>Murat İlhan</h1>
+    <p class="role">Siemens · <span lang="tr">Bina Yönetim Sistemleri</span><span lang="en">Building Management Systems</span></p>
+    <p class="loc">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      Göztepe, İzmir, <span lang="tr">Türkiye</span><span lang="en">Türkiye</span>
+    </p>
+
+    <h3><span lang="tr">İletişim</span><span lang="en">Contact</span></h3>
+    <ul class="contact">
+      <li><a href="mailto:ilhan.murat@outlook.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        ilhan.murat@outlook.com</a></li>
+      <li><a href="https://www.linkedin.com/in/murat-ilhan-6b361771/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6v5.4h-4v-4.8c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6v4.9h-4z"/></svg>
+        linkedin.com/in/murat-ilhan</a></li>
+    </ul>
+
+    <h3><span lang="tr">Öne Çıkan Yetenekler</span><span lang="en">Top Skills</span></h3>
+    <div class="chips">
+      <span class="chip">PLC</span>
+      <span class="chip"><span lang="tr">Enerji Yönetimi</span><span lang="en">Energy Management</span></span>
+      <span class="chip">Modbus</span>
+      <span class="chip">BMS</span>
+      <span class="chip"><span lang="tr">Teknik Satış Desteği</span><span lang="en">Technical Sales Support</span></span>
+      <span class="chip"><span lang="tr">Dijital Dönüşüm</span><span lang="en">Digital Transformation</span></span>
+    </div>
+
+    <h3><span lang="tr">Diller</span><span lang="en">Languages</span></h3>
+    <div class="lang-row"><span lang="tr">Türkçe</span><span lang="en">Turkish</span><span><span lang="tr">Ana dil</span><span lang="en">Native</span></span></div>
+    <div class="bar"><i style="width:100%"></i></div>
+    <div class="lang-row"><span lang="tr">İngilizce</span><span lang="en">English</span><span><span lang="tr">Tam profesyonel</span><span lang="en">Full professional</span></span></div>
+    <div class="bar"><i style="width:88%"></i></div>
+  </aside>
+
+  <main>
+    <section class="card hero">
+      <div class="eyebrow"><span lang="tr">Hakkımda</span><span lang="en">About</span></div>
+      <h2 lang="tr">Binaları daha <em>verimli</em>, <em>güvenilir</em> ve <em>sürdürülebilir</em> kılan teknolojiler.</h2>
+      <h2 lang="en">Technology that makes buildings more <em>efficient</em>, <em>reliable</em> and <em>sustainable</em>.</h2>
+
+      <div lang="tr">
+        <p>Teknik satış desteği, bina yönetim sistemleri otomasyonu ve dijital dönüşüm çözümlerinde uzmanlaşmış, teknoloji odaklı bir profesyonelim. Odak noktam; iş hedeflerini yenilikçi ve sürdürülebilir teknolojilerle buluşturarak müşterilerin operasyonel mükemmelliğe ulaşmasına yardımcı olmak.</p>
+        <p>Satış ekipleri, mühendislik uzmanları, müşteriler ve iş ortaklarıyla birlikte karmaşık endüstriyel sorunlara özel çözümler geliştiriyorum. Teknik uzmanlığı danışman bakış açısıyla birleştirerek kurumların verimliliği, güvenilirliği ve uzun vadeli performansı artıran doğru kararları almasını destekliyorum.</p>
+        <p>Başarılı teknoloji projelerinin güven, iş birliği ve müşteri ihtiyaçlarını derinlemesine anlamak üzerine kurulduğuna inanıyorum. Amacım yalnızca teknik destek vermek değil; iş büyümesine ve müşteri başarısına katkı sağlayan güvenilir bir danışman olmak.</p>
+      </div>
+      <div lang="en">
+        <p>I am a technology-driven professional specializing in technical sales support, building management systems automation, and digital transformation solutions. My focus is on helping customers achieve operational excellence by aligning business objectives with innovative and sustainable technologies.</p>
+        <p>Throughout my career, I have collaborated with sales teams, engineering experts, customers, and business partners to develop tailored solutions for complex industrial challenges. By combining technical expertise with a consultative mindset, I support organizations in making informed decisions that improve efficiency, reliability, and long-term performance.</p>
+        <p>I strongly believe that successful technology projects are built on trust, collaboration, and a deep understanding of customer needs. My goal is not only to provide technical support but also to act as a trusted advisor who contributes to business growth and customer success.</p>
+      </div>
+
+      <div class="focus">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
+          <b lang="tr">Bina Otomasyonu</b><b lang="en">Building Automation</b>
+          <span lang="tr">BMS, PLC ve Modbus tabanlı entegre sistemler</span><span lang="en">Integrated systems built on BMS, PLC and Modbus</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          <b lang="tr">Enerji Yönetimi</b><b lang="en">Energy Management</b>
+          <span lang="tr">Verimlilik ve sürdürülebilirlik odaklı çözümler</span><span lang="en">Solutions focused on efficiency and sustainability</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+          <b lang="tr">Teknik Danışmanlık</b><b lang="en">Technical Advisory</b>
+          <span lang="tr">Müşteri ihtiyacına göre şekillenen çözümler</span><span lang="en">Solutions shaped around customer needs</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec"><span lang="tr">Deneyim</span><span lang="en">Experience</span></h2>
+      <div class="job">
+        <div class="logo" aria-hidden="true">S</div>
+        <div>
+          <div class="job-head">
+            <div>
+              <h3>SI B PSE <span class="now"><span lang="tr">Güncel</span><span lang="en">Current</span></span></h3>
+              <p class="co">Siemens · <span lang="tr">Bina Yönetim Sistemleri</span><span lang="en">Building Management Systems</span></p>
+            </div>
+            <div class="date mono"><span lang="tr">Nisan 2024 – Günümüz</span><span lang="en">Apr 2024 – Present</span><br><span lang="tr">İzmir, Türkiye</span><span lang="en">İzmir, Türkiye</span></div>
+          </div>
+          <ul lang="tr">
+            <li>Bina yönetim sistemleri projelerinde satış ekiplerine teknik destek</li>
+            <li>Müşteri ihtiyaçlarına göre otomasyon ve enerji yönetimi çözümlerinin tasarlanması</li>
+            <li>Mühendislik ekipleri, müşteriler ve iş ortaklarıyla çözüm geliştirme</li>
+          </ul>
+          <ul lang="en">
+            <li>Technical support for sales teams on building management systems projects</li>
+            <li>Designing automation and energy management solutions around customer needs</li>
+            <li>Developing solutions with engineering teams, customers and business partners</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="sec"><span lang="tr">Eğitim</span><span lang="en">Education</span></h2>
+      <div class="edu">
+        <div class="edu-item">
+          <div>
+            <h3><span lang="tr">İzmir Yüksek Teknoloji Enstitüsü</span><span lang="en">İzmir Institute of Technology</span></h3>
+            <p><span lang="tr">Yüksek Lisans, Enerji Yönetimi ve Sistem Teknolojileri</span><span lang="en">Master's degree, Energy Management and Systems Technology</span></p>
+            <p class="date mono">2022 – 2025</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <h3><span lang="tr">Beykent Üniversitesi</span><span lang="en">Beykent University</span></h3>
+            <p><span lang="tr">Lisans, Elektrik-Elektronik ve Haberleşme Mühendisliği</span><span lang="en">Bachelor's degree, Electrical, Electronics and Communications Engineering</span></p>
+            <p class="date mono">2010 – 2014</p>
+            <span class="badge"><span lang="tr">%100 ÖSYM Bursu</span><span lang="en">100% ÖSYM Scholarship</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card cta">
+      <div>
+        <h2><span lang="tr">Birlikte çalışalım</span><span lang="en">Let's work together</span></h2>
+        <p><span lang="tr">Bina otomasyonu ve enerji yönetimi projeleri için iletişime geçin.</span><span lang="en">Get in touch about building automation and energy management projects.</span></p>
+      </div>
+      <a class="btn" href="mailto:ilhan.murat@outlook.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span lang="tr">E-posta gönder</span><span lang="en">Send an email</span>
+      </a>
+    </section>
+  </main>
+</div>
+
+<footer>© <span id="year">2026</span> Murat İlhan</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+    function setLang(l) {
+      root.setAttribute('data-lang', l);
+      root.setAttribute('lang', l);
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === l));
+      });
+      store('cv-lang', l);
+    }
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); });
+    });
+    setLang(store('cv-lang') || 'tr');
+
+    var saved = store('cv-theme');
+    if (saved) root.setAttribute('data-theme', saved);
+    document.getElementById('theme').addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme')
+        ? root.getAttribute('data-theme') === 'dark'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var next = dark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      store('cv-theme', next);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
