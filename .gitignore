@@ -1,0 +1,8 @@
+.env
+.env.*
+credentials.json
+*.key
+*.pem
+.claude/settings.local.json
+node_modules/
+__pycache__/
